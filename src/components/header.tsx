@@ -1,26 +1,38 @@
 import logo from "@/assets/Logo.png";
-import cpn1 from "@/assets/icons/Component 1.svg";
-import cpn2 from "@/assets/icons/Component 2.svg";
-import cpn3 from "@/assets/icons/Component 3.svg";
+import cpn1 from "@/assets/icons/Heart-icon.svg";
+import cpn2 from "@/assets/icons/User-icon.svg";
+import cpn3 from "@/assets/icons/Cart-icon.svg";
 import { Input } from "@/components/input";
 import search from "@/assets/icons/search.svg";
+
+const navLinks = [
+  { name: "Shop", href: "" },
+  { name: "Men", href: "" },
+  { name: "Women", href: "" },
+  { name: "Combos", href: "" },
+  { name: "Joggers", href: "" },
+];
+
+const icons = [
+  { src: cpn1, alt: "heart" },
+  { src: cpn2, alt: "user" },
+  { src: cpn3, alt: "cart" },
+];
 
 export default function Header() {
   return (
     <header className="top-0 left-0 w-full bg-white z-50 shadow-sm">
       <div className="max-w-[1440px] max-h-[108px] mx-auto flex items-center justify-between px-6 md:px-10 lg:px-[102px] py-4">
-        <img
-          src={logo}
-          alt="Logo"
-          className="w-[91px] h-[45px] cursor-pointer"
-        />
+        <a href="">
+          <img src={logo} alt="Logo" className="w-[91px] h-[45px]" />
+        </a>
 
         <nav className="text-xl hidden lg:flex gap-10 pl-[77px] text-frost-grey">
-          <a href="">Shop</a>
-          <a href="">Men</a>
-          <a href="">Women</a>
-          <a href="">Combos</a>
-          <a href="">Joggers</a>
+          {navLinks.map((link, index) => (
+            <a key={index} href={link.href}>
+              {link.name}
+            </a>
+          ))}
         </nav>
 
         <div className="flex-1" />
@@ -30,16 +42,21 @@ export default function Header() {
             <img
               src={search}
               alt="search"
-              className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 opacity-70"
+              className="absolute left-3 top-1/2 -translate-y-1/2 size-4 opacity-70"
             />
             <Input type="text" placeholder="Search" className="pl-9" />
           </div>
 
-          <div className="flex cursor-pointer gap-3">
-            <img src={cpn1} alt="icon1" className="w-8 h-8 md:w-10 md:h-10" />
-            <img src={cpn2} alt="icon2" className="w-8 h-8 md:w-10 md:h-10" />
-            <img src={cpn3} alt="icon3" className="w-8 h-8 md:w-10 md:h-10" />
-          </div>
+          {icons.map((icon, index) => (
+            <a href="">
+              <img
+                key={index}
+                src={icon.src}
+                alt={icon.alt}
+                className="w-8 h-8 md:w-10 md:h-10"
+              />
+            </a>
+          ))}
         </div>
       </div>
     </header>

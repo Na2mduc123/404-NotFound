@@ -1,4 +1,4 @@
-import main_image from "@/assets/Frame 453.png";
+import main_image from "@/assets/bg.png";
 import { Button } from "@/components/button";
 
 export default function Main() {
@@ -10,9 +10,9 @@ export default function Main() {
           alt="404"
           className="w-[395.96px] h-[273.56px] mb-[14px]"
         />
-        <h2 className="text-[34px] font-semibold mb-[10px] ">
+        <div className="text-[34px] font-semibold mb-[10px] ">
           Oops! Page not found
-        </h2>
+        </div>
         <span className="text-[16px] font-medium max-w-[459px] mb-[42px] text-frost-grey">
           The page you are looking for might have been removed or temporarily
           unavailable.
