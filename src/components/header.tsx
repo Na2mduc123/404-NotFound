@@ -1,7 +1,7 @@
 import logo from "@/assets/Logo.png";
-import cpn1 from "@/assets/icons/Heart-icon.svg";
-import cpn2 from "@/assets/icons/User-icon.svg";
-import cpn3 from "@/assets/icons/Cart-icon.svg";
+import cpn1 from "@/assets/icons/heart-icon.svg";
+import cpn2 from "@/assets/icons/user-icon.svg";
+import cpn3 from "@/assets/icons/cart-icon.svg";
 import { Input } from "@/components/input";
 import search from "@/assets/icons/search.svg";
 

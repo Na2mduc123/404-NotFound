@@ -2,8 +2,8 @@ import fb from "@/assets/icons/facebook.svg";
 import ig from "@/assets/icons/instagram.svg";
 import tw from "@/assets/icons/twitter.svg";
 import lk from "@/assets/icons/linkedin.svg";
-import ch from "@/assets/chplay.png";
-import as from "@/assets/Appstore.png";
+import ch from "@/assets/GooglePlayImage.png";
+import as from "@/assets/AppStoreImage.png";
 import arrow from "@/assets/icons/arrow.svg";
 
 const sections = [
@@ -46,7 +46,7 @@ export default function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-4 md:grid-flow-row gap-10 text-left max-w-[1059px] ml-[76px] justify-between">
         {sections.map((section, index) => (
           <div key={index}>
-            <h3 className="font-bold mb-4 text-[28.58px]">{section.title}</h3>
+            <div className="font-bold mb-4 text-[28.58px]">{section.title}</div>
             <ul className="space-y-2 text-lg text-cascading-white">
               {section.links.map((link, idx) => (
                 <li key={idx}>
@@ -63,7 +63,7 @@ export default function Footer() {
         ))}
 
         <div>
-          <h3 className="font-bold mb-4 text-[28.58px]">Location</h3>
+          <div className="font-bold mb-4 text-[28.58px]">Location</div>
           <p className="text-lg text-cascading-white">
             support@euphoria.in <br />
             Eklingpura Chouraha, Ahmedabad Main Road <br />
